@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://m2.dv8tion.net/releases'
+    }
+    maven {
+        url 'https://search.maven.org/artifact/'
+    }
+}
+
+dependencies {
+    implementation platform('io.projectreactor:reactor-bom:2020.0.15')
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation 'com.discord4j:discord4j-core:3.2.1'
+    implementation 'com.sedmelluq:lavaplayer:1.3.77'
+    implementation 'com.google.apis:google-api-services-youtube:v3-rev20210915-1.32.1'
+    implementation 'io.projectreactor.netty:reactor-netty-core:1.0.15'
+    implementation 'io.projectreactor.netty:reactor-netty-http:1.0.15'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.4'
+    implementation 'org.slf4j:slf4j-simple:2.0.0-alpha6'
+
+}
